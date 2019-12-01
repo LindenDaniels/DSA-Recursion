@@ -1,0 +1,15 @@
+function organize(org, boss) {
+  let node = {};
+
+  org
+    .filter(item => item.boss === boss)
+    .forEach(item => node[item.id] = organize(org, item.id));
+  return node;  
+}
+
+console.log(JSON.stringify(organize(org, null)));
+
+//input: a number
+//output: a binary number
+//recursion input: num/2
+//recursion output: num either 1 or 0
