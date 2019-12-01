@@ -1,0 +1,10 @@
+console.log('Reverse String');
+
+reverseString = (x) =>{
+  if(x === ''){
+    return '';
+  }
+
+  return reverseString(x.slice(1)) + x.charAt(0)
+}
+console.log(reverseString('myAwesomeString'))
